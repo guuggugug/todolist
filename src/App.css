@@ -1,0 +1,157 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Full page background */
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #87ceeb, #e0f7fa);
+  font-family: Arial, sans-serif;
+  color:black;
+}
+
+/* White container */
+.todo-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: center;
+}
+
+/* Title + email */
+.todo-container h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color:black; 
+}
+
+.user-email {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* Input + button side by side */
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  color:black;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  color:white;  
+}
+
+.input-group button {
+  background: #60abe9;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.input-group button:hover {
+  background: #1976d2;
+}
+
+/* Todo list */
+.todo-list {
+  margin-bottom: 20px;
+}
+
+.todo-item {
+  background: #f1f1f1;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: black;
+  transition: background 0.2s ease;
+}
+
+.todo-item.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+  color:gray;
+}
+
+/* Delete button */
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: darkred;
+}
+
+/* Logout button */
+.logout {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout:hover {
+  background: #222;
+}
+
+/* Style normal inputs */
+.ant-input {
+  background-color: #ffffff !important;
+  color: #000000 !important;      
+  border: 1px solid black !important;       
+}
+
+/* Style password inputs */
+.ant-input-password input {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border : white !important;
+}
+
+/* Placeholder text */
+.ant-input::placeholder,
+.ant-input-password input::placeholder {
+  color: black !important;
+  opacity: 0.6 !important;
+}
+
+/* Focus state for both */
+.ant-input:focus,
+.ant-input-password input:focus {
+  border-color: #1925ff !important;
+  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.2) !important;
+}
