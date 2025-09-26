@@ -70,13 +70,13 @@ export default function Home() {
             <div
               key={todo.id}
               className={`todo-item ${todo.done ? "done" : ""}`}
-              onClick={() => toggleTodo(todo.id)} // 🔑 entire item is clickable
+              onClick={() => toggleTodo(todo.id)}
             >
               <span className="todo-text">{todo.text}</span>
               <button
                 className="delete-btn"
                 onClick={(e) => {
-                  e.stopPropagation(); // prevent toggle when deleting
+                  e.stopPropagation();
                   removeTodo(todo.id);
                 }}
               >
